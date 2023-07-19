@@ -29,15 +29,16 @@
 </nav>
 
 <div class="container mt-3">
-    <form action="/action_page.php">
+<%--    form action = "aa" << aa로 데이터를 한방에 전송해주겠다--%>
+    <form action="/product" method="post" enctype="application/x-www-form-urlencoded">
         <div class="mb-3 mt-3">
-            <input type="text" class="form-control" placeholder="Enter 상품명">
+            <input type="text" class="form-control" placeholder="Enter 상품명" name="name">
         </div>
         <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Enter 상품가격">
+            <input type="number" class="form-control" placeholder="Enter 상품가격" name="price">
         </div>
         <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Enter 상품재고">
+            <input type="number" class="form-control" placeholder="Enter 상품재고" name="qty">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

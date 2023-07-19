@@ -1,4 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%-- ▽ jstl을 적용하는데 사용되는 라이브러리 태그 d--%>
+<%-- ▽ 적용하면 자바의 여러 기능을 사용할수 있다. (태그양식마다 지정된 기능이 다르다) d--%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,24 +41,19 @@
             </tr>
         </thead>
         <tbody>
+        <%-- '$' 는 request 객체에 접근한다.(문법)--%>
+        <%-- '${}' 는 request 객체에 있는 값을 가져오는 역할이다.(문법)--%>
+        <c:forEach var="p" items="${productList}">
             <tr>
-                <td>1</td>
-                <td>바나나</td>
-                <td>1000원</td>
-                <td>50개</td>
+                    <%-- '${p.id}'라고 적어야 자바의 p.getId 처럼 접근한다.(문법)--%>
+                <td>${p.id}</td>
+                <td>${p.name}</td>
+                <td>${p.price}원</td>
+                <td>${p.qty}</td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>사과</td>
-                <td>2000원</td>
-                <td>50개</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>참외</td>
-                <td>500원</td>
-                <td>50개</td>
-            </tr>
+        </c:forEach>
+
+
         </tbody>
     </table>
 </div>
