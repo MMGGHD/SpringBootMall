@@ -2,14 +2,15 @@ package shop.mtcoding.mall.model;
 
 
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
-@Getter
+@Getter @Setter
 @Table(name = "product_tb")
 @Entity
 public class Product {
-    // model은 JPA를 통해 데이터베이스를 구축하기 위해 필요하다.
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

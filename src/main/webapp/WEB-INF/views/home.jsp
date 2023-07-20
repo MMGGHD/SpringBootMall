@@ -47,7 +47,7 @@
             <tr>
                     <%-- '${p.id}'라고 적어야 자바의 p.getId 처럼 접근한다.(문법)--%>
                 <td>${p.id}</td>
-                <td>${p.name}</td>
+                <td><a href="/product/${p.id}">${p.name}</a></td>
                 <td>${p.price}원</td>
                 <td>${p.qty}</td>
             </tr>

@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,18 +31,30 @@
 </nav>
 
 <div class="container mt-3">
+
 <%--    form action = "aa" << aa로 데이터를 한방에 전송해주겠다--%>
-    <form action="/product" method="post" enctype="application/x-www-form-urlencoded">
+
+    <form action="/product/update" method="post" enctype="application/x-www-form-urlencoded">
+
         <div class="mb-3 mt-3">
-            <input type="text" class="form-control" placeholder="Enter 상품명" name="name">
+            <input type="text" class="form-control" value="${p.id}" name="id" readonly>
         </div>
         <div class="mb-3">
-            <input type="number" class="form-control" placeholder="Enter 상품가격" name="price">
+            <input type="text" class="form-control" value="${p.name}" name="name">
         </div>
         <div class="mb-3">
-            <input type="number" class="form-control" placeholder="Enter 상품재고" name="qty">
+            <input type="number" class="form-control" value="${p.price}" name="price">
         </div>
-        <button type="submit" class="btn btn-primary">상품등록</button>
+        <div class="mb-3">
+            <input type="number" class="form-control" value="${p.qty}" name="qty">
+        </div>
+        <button type="submit" class="btn btn-primary">상품수정</button>
+
+    </form>
+    <form action="/product/delete" method="post">
+        <%-- form action이 2개일수 없기 때문에 따로 Form을 하나 더 만들었다--%>
+            <input type="hidden" class="form-control" value="${p.id}" name="id">
+            <button type="submit" class="btn btn-danger">상품삭제</button>
     </form>
 </div>
 
