@@ -38,6 +38,7 @@
                 <th>상품명</th>
                 <th>상품가격</th>
                 <th>상품재고</th>
+                <th>판매자명</th>
             </tr>
         </thead>
         <tbody>
@@ -50,6 +51,7 @@
                 <td><a href="/product/${p.id}">${p.name}</a></td>
                 <td>${p.price}원</td>
                 <td>${p.qty}</td>
+                <td>${p.seller.name}</td>
             </tr>
         </c:forEach>
 

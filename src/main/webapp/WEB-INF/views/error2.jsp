@@ -11,7 +11,7 @@
 <body>
 
 <div class="container mt-3">
-    <h1>너 요청잘못헀어 ㅋㅋㅋㅋ</h1>
+    <h1>그런 사람 없습니다</h1>
 </div>
 
 </body>

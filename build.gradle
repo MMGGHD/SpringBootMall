@@ -22,6 +22,8 @@ repositories {
 }
 
 dependencies {
+    implementation group: 'ch.simas.qlrm', name: 'qlrm', version: '1.7.1' //result Mapper
+    runtimeOnly 'com.h2database:h2' // 메모리DB (가짜DB)
     implementation 'javax.servlet:jstl'
     implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'

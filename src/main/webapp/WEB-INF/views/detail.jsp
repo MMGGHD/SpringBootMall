@@ -48,6 +48,9 @@
         <div class="mb-3">
             <input type="number" class="form-control" value="${p.qty}" name="qty">
         </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" value="${p.seller.name}" name="sellerName">
+        </div>
         <button type="submit" class="btn btn-primary">상품수정</button>
 
     </form>

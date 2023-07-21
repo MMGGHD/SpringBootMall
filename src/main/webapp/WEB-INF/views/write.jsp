@@ -40,6 +40,9 @@
         <div class="mb-3">
             <input type="number" class="form-control" placeholder="Enter 상품재고" name="qty">
         </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Enter 판매자명" name="sellerName">
+        </div>
         <button type="submit" class="btn btn-primary">상품등록</button>
     </form>
 </div>
